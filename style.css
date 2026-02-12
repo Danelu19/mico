@@ -94,9 +94,8 @@ body {
     width: 4px; /* El tamaño de un 'pixel' */
     height: 4px;
     z-index: 5;
-    background-color: transparent; /* El div en sí es transparente */
+    background-color: transparent; 
     
-    /* DIBUJANDO CON SOMBRAS (Coordenada X, Coordenada Y, Color) */
     box-shadow: 
         /* Fila 1 */
         -4px -6px 0 #000, 4px -6px 0 #000,
@@ -109,7 +108,6 @@ body {
         /* Fila 5 (Punta) */
         0px 10px 0 #000;
         
-    /* Escalamos todo para que sea más grande (porque 4px es muy chico) */
     scale: 4; 
     transition: opacity 0.3s;
 }
@@ -117,7 +115,7 @@ body {
 .letter {
     position: absolute;
     bottom: 0;
-    left: 20px; /* Margen lateral */
+    left: 20px; 
     right: 20px;
     height: 180px;
     background-color: var(--paper-color);
@@ -129,12 +127,12 @@ body {
     align-items: center;
     text-align: center;
     padding: 15px;
-    box-shadow: inset 0 -10px 0 rgba(0,0,0,0.05); /* Sombra interna decorativa */
+    box-shadow: inset 0 -10px 0 rgba(0,0,0,0.05); 
 }
 
 .letter-content {
-    opacity: 0; /* Texto invisible al inicio */
-    transition: opacity 0.5s 0.3s; /* Delay para que aparezca después */
+    opacity: 0; 
+    transition: opacity 0.5s 0.3s; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -144,7 +142,7 @@ body {
 
 .pixel-text {
     font-size: 10px;
-    color: #ffaa00; /* Naranja dorado */
+    color: #ffaa00; 
     margin: 0;
     text-shadow: 1px 1px 0 #000;
 }
@@ -172,7 +170,7 @@ body {
     position: relative;
     box-shadow: 0 4px 0 rgba(0,0,0,0.2);
     transition: transform 0.1s, box-shadow 0.1s;
-    border-radius: 4px; /* Un poco redondeado se ve más "indie" */
+    border-radius: 4px;
 }
 
 .btn-pixel:active {
@@ -193,8 +191,8 @@ body {
 }
 
 
-/* --- ESTADOS ACTIVOS (Clase .open) --- */
-/* Cuando el sobre tiene la clase 'open'... */
+/* --- ESTADOS ACTIVOS ---*/
+
 
 .envelope-wrapper.open .flap.top {
     transform: rotateX(180deg);
@@ -203,16 +201,15 @@ body {
 
 .envelope-wrapper.open .letter {
     bottom: 120px; /* Sube */
-    z-index: 10; /* Se pone ENCIMA de todo */
-}
-
+    z-index: 10; 
+    
 .envelope-wrapper.open .letter-content {
     opacity: 1;
 }
 
 .envelope-wrapper.open .pixel-heart,
 .envelope-wrapper.open ~ .click-instruction { 
-    /* El ~ selecciona el hermano (el texto de arriba) */
+   
     opacity: 0;
     pointer-events: none;
 }
