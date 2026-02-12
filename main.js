@@ -38,7 +38,6 @@ function moveButton() {
 yesBtn.addEventListener('click', (e) => {
     e.stopPropagation(); 
     
-    // Cambiamos el contenido de la carta
     letterContent.innerHTML = `
         <p style="font-size: 40px; margin:0;">🧡</p>
         <p style="font-size: 14px; line-height: 1.5;">
